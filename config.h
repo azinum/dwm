@@ -21,12 +21,24 @@ static const char *colors[][3] = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, selbgcolor,  selbordercolor },
+
+	[SchemeStatus]   = { col_gray3, col_gray1,  "#000000" }, // Statusbar right {text, background, not used but cannot be empty}
+	[SchemeTagsSel]  = { col_gray4, selbgcolor,  "#000000" }, // Tagbar left selected {text, background,not used but cannot be empty}
+	[SchemeTagsNorm] = { col_gray3, col_gray1,  "#000000" }, // Tagbar left unselected {text, background, not used but cannot be empty}
+	[SchemeInfoSel]  = { col_gray4, selbgcolor,  "#000000" }, // infobar middle  selected {text, background, not used but cannot be empty}
+	[SchemeInfoNorm] = { col_gray3, col_gray1,  "#000000" }, // infobar middle  unselected {text, background, not used but cannot be empty}
 };
 
-static const unsigned int alphas[][3]      = {
+static const unsigned int alphas[][3] = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, 0xd0, OPAQUE },
 	[SchemeSel]  = { OPAQUE, 0xd0, OPAQUE },
+
+	[SchemeStatus]   = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeTagsSel]  = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeTagsNorm] = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeInfoSel]  = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeInfoNorm] = { OPAQUE, OPAQUE, OPAQUE },
 };
 
 /* tagging */
