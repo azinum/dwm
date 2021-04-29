@@ -1,0 +1,6 @@
+*.o
+*.rej
+*.orig
+st
+*.swp
+*.swo
