@@ -14,7 +14,9 @@ static const Block blocks[] = {
 
 	{"mem: ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
 
-  {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 20, 0},
+  {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 10, 0},
+
+  {"", "printf \"🔋 %s%%\" \"$(cat /sys/class/power_supply/BAT0/capacity)\" 2>/dev/null", 30, 0},
 
   {"", "stat-volume", 30, 1},
 
