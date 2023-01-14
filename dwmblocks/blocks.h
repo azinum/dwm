@@ -12,7 +12,7 @@ static const Block blocks[] = {
 
   {"", "keylayout", 60, 2},
 
-  {"mem: ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
+  {"💾 ", "free -m | awk '/^Mem/ { print $3\"/\"$2\" mb\" }' | sed s/i//g",	30,		0},
 
   {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 20, 0},
 

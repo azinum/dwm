@@ -363,6 +363,17 @@ keypress(XKeyEvent *ev)
 		break;
 	}
 
+  if (ev->state & ShiftMask) {
+    switch (ksym) {
+      case XK_Insert: {
+        XConvertSelection(dpy, (ev->state & ShiftMask) ? clip : XA_PRIMARY,
+          utf8, utf8, win, CurrentTime);
+        return;
+      }
+      default:
+        break;
+    }
+  }
 	if (ev->state & ControlMask) {
 		switch(ksym) {
 		case XK_a: ksym = XK_Home;      break;
