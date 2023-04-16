@@ -6,20 +6,15 @@ static char delim[] = " | ";
 static unsigned int delimLen = 5;
 
 #define HAS_BATTERY 0
-#define HAS_CC_PY 0
 
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
   /* Icon */	/* Command */		/* Update Interval */	/* Update Signal */
   {"\n", "", 60, 0},
 
-#if HAS_CC_PY
-  {"💲", "cc.py 2>/dev/null", 60, 0},
-#endif
-
   {"", "keylayout", 60, 2},
 
-  {"💾 ", "free -m | awk '/^Mem/ { print $3\"/\"$2\" mb\" }' | sed s/i//g", 5, 0},
+  {"💾 ", "free -m | awk '/^Mem/ { print $3\"/\"$2\" mb\" }' | sed s/i//g", 1, 0},
 
   {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 10, 0},
 
