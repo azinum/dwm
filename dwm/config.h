@@ -6,8 +6,8 @@ static unsigned int gappx    = 2;        /* gaps between windows */
 static unsigned int snap     = 32;       /* snap pixel */
 static int showbar           = 1;        /* 0 means no bar */
 static int topbar            = 1;        /* 0 means bottom bar */
-static const char* fonts[]   = { "inconsolata:size=11" };
-static char dmenufont[]      = "inconsolata:size=11";
+static const char* fonts[]   = { "inconsolata:size=12" };
+static char dmenufont[]      = "inconsolata:size=12";
 static char col_gray1[]      = "#222222";
 static char col_gray2[]      = "#444444";
 static char col_gray3[]      = "#bbbbbb";

@@ -22,7 +22,7 @@ static const Block blocks[] = {
   {"", "printf \"🔋 %s%%\" \"$(cat /sys/class/power_supply/BAT0/capacity)\" 2>/dev/null", 30, 0},
 #endif
 
-  {"", "sb-stat-volume", 30, 1},
+  {"", "sb-volume", 30, 1},
 
   {"📅 ", "date '+%a %d %b %Y %H:%M:%S'", 1, 0},
 };
