@@ -6,11 +6,9 @@ static unsigned int gappx    = 2;        /* gaps between windows */
 static unsigned int snap     = 32;       /* snap pixel */
 static int showbar           = 1;        /* 0 means no bar */
 static int topbar            = 1;        /* 0 means bottom bar */
-static const char* fonts[]   = { "inconsolata:size=12" };
-static char dmenufont[]      = "inconsolata:size=12";
-static char col_gray1[]      = "#222222";
+static const char* fonts[]   = { "inconsolata:size=11" };
+static char dmenufont[]      = "inconsolata:size=11";
 static char col_gray2[]      = "#444444";
-static char col_gray3[]      = "#bbbbbb";
 static char col_gray4[]      = "#eeeeee";
 
 static char selbgcolor[]     = "#086a7e";
@@ -141,6 +139,7 @@ static Key keys[] = {
   { MODKEY,                       XK_minus,  setgaps,        { .i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        { .i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        { .i = 0  } },
+  { MODKEY,                       XK_F5,     xrdb,           { .v = NULL } },
   TAGKEYS(                        XK_1,                      0)
   TAGKEYS(                        XK_2,                      1)
   TAGKEYS(                        XK_3,                      2)
