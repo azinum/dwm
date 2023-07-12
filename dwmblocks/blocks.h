@@ -5,8 +5,6 @@
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
 
-#define HAS_BATTERY 1
-
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
   /* Icon */	/* Command */		/* Update Interval */	/* Update Signal */
@@ -18,7 +16,7 @@ static const Block blocks[] = {
 
   {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 10, 0},
 
-#if HAS_BATTERY
+#ifdef HAS_BATTERY
   {"", "printf \"🔋 %s%%\" \"$(cat /sys/class/power_supply/BAT0/capacity)\" 2>/dev/null", 30, 0},
 #endif
 
