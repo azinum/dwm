@@ -5,7 +5,7 @@
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
 
-#define HAS_BATTERY 0
+#define HAS_BATTERY 1
 
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
@@ -14,7 +14,7 @@ static const Block blocks[] = {
 
   {"", "sb-keylayout", 60, 2},
 
-  {"💾 ", "free -m | awk '/^Mem/ { print $3\"/\"$2\" mb\" }' | sed s/i//g", 1, 0},
+  {"💾 ", "free -m | awk '/^Mem/ { print $3+$5\"/\"$2\" mb\" }' | sed s/i//g", 1, 0},
 
   {"", "sed 's/down/🌎❌/;s/up/🌎/' /sys/class/net/e*/operstate 2>/dev/null", 10, 0},
 
